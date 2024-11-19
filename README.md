@@ -118,3 +118,5 @@ src
 
 
 # Задание № 2
+
+Ссылка на схему [Декомпозиция монолита](https://drive.google.com/file/d/1TZbHz_SZuSA1o7cu06tRfmPZRb73ikNp/view?usp=sharing)
