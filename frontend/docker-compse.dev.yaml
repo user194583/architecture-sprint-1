@@ -1,0 +1,41 @@
+services:
+
+  front_host_dev:
+    build:
+      context: host
+      dockerfile: ../Dockerfile.dev
+    ports:
+      - 8080:8080
+    volumes:
+      - ./host:/app
+    command: ['tail', "-f", "/dev/null"]
+  
+  front_auth_dev:
+    build:
+      context: auth
+      dockerfile: ../Dockerfile.dev
+    ports:
+      - 8081:8081
+    volumes:
+      - ./auth:/app
+    command: ['tail', "-f", "/dev/null"]
+  
+  front_gallery_dev:
+    build:
+      context: gallery
+      dockerfile: ../Dockerfile.dev
+    ports:
+      -  8082:8082
+    volumes:
+      - ./gallery:/app
+    command: ['tail', "-f", "/dev/null"]
+  
+  front_profile_dev:
+    build:
+      context: profile
+      dockerfile: ../Dockerfile.dev
+    ports:
+      - 8083:8083
+    volumes:
+      - ./profile:/app
+    command: ['tail', "-f", "/dev/null"]
